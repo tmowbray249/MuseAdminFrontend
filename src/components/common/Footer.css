@@ -1,0 +1,13 @@
+footer {
+	background-color: #212529;
+	color: #fff;
+	padding: 20px 15px;
+}
+
+footer > p {
+	margin-bottom: 10px;
+}
+
+.disclaimer > p {
+	margin-bottom: 2px;
+}

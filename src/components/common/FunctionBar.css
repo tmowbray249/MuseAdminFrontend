@@ -1,0 +1,89 @@
+.function-bar {
+    background-color: #5b0d28;
+    height: 64px;
+    display: grid;
+    grid-template-columns: 97% 3%;
+}
+
+.search-area {
+    width: 50% !important;
+}
+
+.account-icon {
+    color: #fff;
+    padding: 2px;
+    font-size: 32px;
+}
+
+.mobile-search, .mobile-search-box, .mobile-search-close-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 1500px) {
+    .function-bar {
+        grid-template-columns: 94% 6%;
+    }
+
+    .search-area {
+        width: 80% !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .function-bar {
+        grid-template-columns: 91% 9%;
+    }
+
+    .search-area {
+        width: 90% !important;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .function-bar {
+        grid-template-columns: 90% 10%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .function-bar {
+        width: 20%;
+        position: absolute;
+        display: inline-flex;
+        top: 0;
+        z-index: 100;
+        margin-left: 80%;
+    }
+
+    .search {
+        display: none;
+        padding: 9px;
+    }
+
+    .mobile-search {
+        display: block;
+        color: #fff;
+        font-size: 26px;
+        padding: 9px;
+    }
+
+    .mobile-search-icon {
+        margin-right: 15px;
+    }
+
+    .account-icon {
+        text-align: right;
+    }
+
+    .search-icon {
+        display: none !important;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .function-bar {
+        width: 25%;
+        margin-left: 75%;
+    }
+}

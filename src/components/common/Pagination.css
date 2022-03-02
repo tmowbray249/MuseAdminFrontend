@@ -1,0 +1,11 @@
+button {
+    margin: 10px;
+}
+
+.pagination-btn {
+    vertical-align: unset;
+}
+
+.page-select-label {
+    background-color: #000;
+}
