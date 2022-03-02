@@ -1,0 +1,11 @@
+.page-content {
+  background-color: #f8f8ff;
+  margin-left: 64px;
+  height: 900px;
+}
+
+@media only screen and (max-width: 550px) {
+  .page-content {
+    margin-left: 0;
+  }
+}

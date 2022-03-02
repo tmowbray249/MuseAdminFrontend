@@ -1,0 +1,33 @@
+.login-card {
+    color: #fff;
+    background-color: rgba(33, 37, 41, 0.94);
+    border: 1px solid #fff !important;
+}
+
+.login-card .form-floating {
+    color: #000;
+}
+
+.login-btn {
+    background-color: #efefef;
+    margin: 10px 0;
+}
+
+.login-btn:hover {
+    background-color: steelblue;
+    color: #fff;
+    width: 100%;
+}
+
+.login-error-container {
+    background-color: #fff;
+    padding: 0;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.login-error-container > p {
+    margin: 0 2px;
+    padding: 0;
+}
