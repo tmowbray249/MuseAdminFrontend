@@ -4,7 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Navigation from "./components/common/Navigation";
 import AdminHome from "./components/home/AdminHome";
+import EventsHome from "./components/events/EventsHome";
+import MediaHome from "./components/media/MediaHome";
+import ProductsHome from "./components/products/ProductsHome";
+import AccountsHome from "./components/accounts/AccountsHome";
 import SettingsHome from "./components/settings/SettingsHome";
+import UserHome from "./components/user_account/UserHome";
+import NotFoundPage from "./components/common/NotFoundPage";
 
 function App() {
 
@@ -19,13 +25,13 @@ function App() {
                 <Routes>
                     <Route path="/" element={<AdminHome />} />
                     <Route path="/dashboard" element={<AdminHome />} />
-                    <Route path="/media" element={<h1>Media Page</h1>} />
-                    <Route path="/social" element={<h1>Social Page</h1>} />
-                    <Route path="/products" element={<h1>Products Page</h1>} />
-                    <Route path="/accounts" element={<h1>Accounts Page</h1>} />
+                    <Route path="/events" element={<EventsHome />} />
+                    <Route path="/media" element={<MediaHome />} />
+                    <Route path="/products" element={<ProductsHome />} />
+                    <Route path="/accounts" element={<AccountsHome />} />
                     <Route path="/settings" element={<SettingsHome />} />
-                    <Route path="/my-information" element={<h1>My Information</h1>} />
-                    <Route path="*" element={<h1>Not found page</h1>} />
+                    <Route path="/my-information" element={<UserHome />} />
+                    <Route path="*" element={<NotFoundPage />} />
                 </Routes>
 
             </BrowserRouter>

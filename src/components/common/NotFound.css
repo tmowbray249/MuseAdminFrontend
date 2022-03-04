@@ -1,9 +1,4 @@
-.not-found-container {
-    margin: auto;
-    width: 100%;
-}
-
-.not-found-container > h1 {
+.not-found-page > h1 {
     font-weight: bold;
     font-size: 60px;
 }
