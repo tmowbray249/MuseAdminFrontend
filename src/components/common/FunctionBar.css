@@ -69,10 +69,13 @@
 
     .mobile-search-icon {
         margin-right: 15px;
+        margin-left: -20%;
     }
 
     .account-icon {
         text-align: right;
+        padding: 3px 0;
+        margin-left: -20%;
     }
 
     .search-icon {
@@ -85,5 +88,24 @@
     .function-bar {
         width: 25%;
         margin-left: 75%;
+    }
+
+    .mobile-search-icon {
+        margin-left: -5%;
+    }
+
+    .account-icon {
+        margin-left: -5%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .function-bar {
+        width: 35%;
+        margin-left: 75%;
+    }
+
+    .account-icon {
+        margin-left: -10%;
     }
 }

@@ -75,7 +75,7 @@ class FunctionBar extends React.Component {
         mobile_search_close_icon.style.padding = "3px"
         mobile_search_close_icon.style.fontSize = "36px"
         mobile_search_close_icon.style.textAlign = "center"
-        mobile_search_close_icon.style.marginLeft = "89%"
+        mobile_search_close_icon.style.marginLeft = "87%"
         mobile_search_close_icon.style.position = "absolute";
         mobile_search_close_icon.style.bottom = "9px";
     }
