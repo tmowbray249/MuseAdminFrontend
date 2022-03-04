@@ -9,7 +9,7 @@ import {AiOutlineCloseCircle} from 'react-icons/ai';
 class FunctionBar extends React.Component {
 
     //todo theres a bug when making screen big with mobile search open
-    
+
     // todo replace the search bar with the muse logo?
     //      that way I wont have to spend ages on the global search function that hasn't been asked for
 
