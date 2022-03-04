@@ -86,7 +86,6 @@ class FunctionBar extends React.Component {
         let mobile_search_box = this.state.mobile_search_box;
         let mobile_search_icon = this.state.mobile_search_icon;
         let mobile_search = this.state.mobile_search;
-        let search_box = this.state.search_box;
         let mobile_search_close_icon = this.state.mobile_search_close_icon;
 
         function_bar.style.display = "inline-flex";
