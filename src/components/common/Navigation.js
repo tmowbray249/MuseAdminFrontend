@@ -42,7 +42,7 @@ class Navigation extends React.Component {
                     <ul className="menu">
                         <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/dashboard">Dashboard</NavLink>
                         <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/media">Media</NavLink>
-                        <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/social">Social</NavLink>
+                        <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/events">Events</NavLink>
                         <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/products">Products</NavLink>
                         <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/accounts">Accounts</NavLink>
                         <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/settings">Settings</NavLink>
@@ -69,10 +69,10 @@ class Navigation extends React.Component {
                             </NavItem>
                         </NavLink>
 
-                        <NavLink to={"/social"}>
-                            <NavItem eventKey="social">
+                        <NavLink to={"/events"}>
+                            <NavItem eventKey="events">
                                 <NavIcon><BsFillCalendarEventFill /></NavIcon>
-                                <NavText><p className="nav-text">Social</p></NavText>
+                                <NavText><p className="nav-text">Events</p></NavText>
                             </NavItem>
                         </NavLink>
 

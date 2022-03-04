@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Navigation from "./components/common/Navigation";
 import AdminHome from "./components/home/AdminHome";
-import EventsHome from "./components/events/EventsHome";
 import MediaHome from "./components/media/MediaHome";
+import EventsHome from "./components/events/EventsHome";
 import ProductsHome from "./components/products/ProductsHome";
 import AccountsHome from "./components/accounts/AccountsHome";
 import SettingsHome from "./components/settings/SettingsHome";
@@ -25,8 +25,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<AdminHome />} />
                     <Route path="/dashboard" element={<AdminHome />} />
-                    <Route path="/events" element={<EventsHome />} />
                     <Route path="/media" element={<MediaHome />} />
+                    <Route path="/events" element={<EventsHome />} />
                     <Route path="/products" element={<ProductsHome />} />
                     <Route path="/accounts" element={<AccountsHome />} />
                     <Route path="/settings" element={<SettingsHome />} />
