@@ -1,7 +1,11 @@
 import React from 'react';
-import FunctionBar from "../common/FunctionBar";
+import {setNavContainerSize} from "../../Utils";
 
 class SettingsHome extends React.Component {
+
+    componentDidMount() {
+        setNavContainerSize();
+    }
 
     render() {
         return(

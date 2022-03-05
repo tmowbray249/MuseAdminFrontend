@@ -1,6 +1,6 @@
 import React from 'react'
-import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
-import { NavLink } from "react-router-dom";
+import SideNav, {Nav, NavIcon, NavItem, NavText, Toggle} from '@trendmicro/react-sidenav';
+import {NavLink} from "react-router-dom";
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import './Navigation.css'
 import {HiHome} from 'react-icons/hi'
@@ -9,10 +9,17 @@ import {BsFillCalendarEventFill} from 'react-icons/bs'
 import {FaProductHunt} from 'react-icons/fa'
 import {ImUsers} from 'react-icons/im'
 import {AiFillSetting} from 'react-icons/ai'
+import {setNavContainerSize} from "../../Utils";
 
 //todo add hover over icon notice for each option?
 
 class Navigation extends React.Component {
+
+
+    componentDidMount() {
+        setNavContainerSize();
+    }
+
 
     handleClick = () => {
         let options = document.getElementsByClassName('nav-text');
@@ -23,10 +30,12 @@ class Navigation extends React.Component {
                 options[i].style.display = 'block';
             }
         }
+        this.setNavContainerSize();
     }
 
     handleMobileNavClick = () => {
         document.getElementById("mobile-nav-checkbox").checked = false;
+        setNavContainerSize();
     }
 
     render() {

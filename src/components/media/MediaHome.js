@@ -1,9 +1,13 @@
 import React from 'react';
-import FunctionBar from "../common/FunctionBar";
+import {setNavContainerSize} from "../../Utils";
 import DataGrid from "../common/DataGrid";
 
 
 class MediaHome extends React.Component {
+
+	componentDidMount() {
+		setNavContainerSize();
+	}
 
 	render() {
 		return(

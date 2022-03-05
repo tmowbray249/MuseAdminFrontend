@@ -5,8 +5,9 @@
 /* NAVBAR CONTAINER */
 .sidenav---sidenav---_2tBP {
     background-color: #5b0d28;
-    min-height: auto;
-    padding-bottom: 64px;
+    min-height: fit-content;
+    padding-bottom: 128px;
+    position: fixed;
 }
 
 /* HAMBURGER BUTTON */

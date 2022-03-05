@@ -1,9 +1,12 @@
 import React from 'react';
-import FunctionBar from "../common/FunctionBar";
-// import DataGrid from "../common/DataGrid";
+import {setNavContainerSize} from "../../Utils";
 
 
 class AdminHome extends React.Component {
+
+	componentDidMount() {
+		setNavContainerSize();
+	}
 
 	render() {
 		return(

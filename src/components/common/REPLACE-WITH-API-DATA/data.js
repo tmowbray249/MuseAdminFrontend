@@ -1,23 +1,23 @@
 export const columns = [
     {
         name: "Name",
-        selector: "title",
+        selector: row => row.title,
         sortable: true
     },
     {
         name: "Type",
-        selector: "director",
+        selector: row => row.director,
         sortable: true
     },
     {
         name: "Size",
-        selector: "genres",
+        selector: row => row.genres,
         sortable: true,
         // cell: d => <span>{d.genres.join(", ")}</span> # for arrays (to be displayed as lists , )
     },
     {
         name: "Date",
-        selector: "year",
+        selector: row => row.year,
         sortable: true
     }
 ];

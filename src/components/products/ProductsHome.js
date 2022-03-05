@@ -1,8 +1,12 @@
 import React from 'react';
-import FunctionBar from "../common/FunctionBar";
+import {setNavContainerSize} from "../../Utils";
 
 
 class ProductsHome extends React.Component {
+
+	componentDidMount() {
+		setNavContainerSize();
+	}
 
 	render() {
 		return(
