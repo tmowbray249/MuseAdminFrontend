@@ -1,4 +1,26 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #838383 !important;
+    opacity: 1 !important; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #838383 !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #838383 !important;
+}
+
 .data-table-container {
-    background-color: #611275;
+    background-color: #def6ff;
     border-radius: 5px;
+    color: #000;
+}
+
+.fSQziN {
+    border-radius: 0 !important;
+}
+
+.filter-text {
+    color: #000;
 }

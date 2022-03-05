@@ -30,7 +30,7 @@ class Navigation extends React.Component {
                 options[i].style.display = 'block';
             }
         }
-        this.setNavContainerSize();
+        setNavContainerSize();
     }
 
     handleMobileNavClick = () => {

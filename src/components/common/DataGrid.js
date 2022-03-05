@@ -6,7 +6,7 @@ import './DataGrid.css'
 
 import {columns, data} from './REPLACE-WITH-API-DATA/data';
 
-
+// todo need to do recalculate the page height when the rows per page is changed
 
 class DataGrid extends React.Component {
 
