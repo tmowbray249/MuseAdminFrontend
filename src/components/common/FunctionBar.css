@@ -3,6 +3,7 @@
     height: 64px;
     display: grid;
     grid-template-columns: 97% 3%;
+    margin-left: 64px;
 }
 
 .round-out-inner-corner {

@@ -11,6 +11,7 @@ import AccountsHome from "./components/accounts/AccountsHome";
 import SettingsHome from "./components/settings/SettingsHome";
 import UserHome from "./components/user_account/UserHome";
 import NotFoundPage from "./components/common/NotFoundPage";
+import FunctionBar from "./components/common/FunctionBar";
 
 function App() {
 
@@ -21,6 +22,8 @@ function App() {
             <BrowserRouter basename="/museapp/MuseAdminFrontend/">
 
                 <Navigation />
+
+                <FunctionBar />
 
                 <Routes>
                     <Route path="/" element={<AdminHome />} />
