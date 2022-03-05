@@ -60,7 +60,8 @@ class MediaHome extends React.Component {
 			<div className="page-content">
 				<div className="media-home">
 					{/*todo make the header and break crumb its onw component*/}
-            		<h1 className="page-heading">{page_title}</h1>
+					<IoIosArrowRoundBack className="back-arrow" onClick={this.handleBackClick} />
+					<h1 className="page-heading">{page_title}</h1>
 					<p>{page_bread_crumb}</p>
 					{page_content}
 				</div>
