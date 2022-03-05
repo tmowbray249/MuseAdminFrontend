@@ -6,7 +6,6 @@ class SettingsHome extends React.Component {
     render() {
         return(
           <div className="page-content">
-              <FunctionBar />
               <h1>Settings</h1>
           </div>
         );
