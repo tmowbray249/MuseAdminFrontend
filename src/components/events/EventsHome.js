@@ -49,7 +49,6 @@ class EventsHome extends React.Component {
 					handleRowClick={this.handleRowClick}
 				/>;
 		} else {
-			console.log(this.state.rowSelected);
 			let row = this.state.rowSelected;
 			page_title = "Event: " + row.title;
 			page_content = <Event event={row} />
