@@ -1,6 +1,7 @@
 import React from 'react';
 import './Media.css';
 import {setNavContainerSize} from "../../Utils";
+import PageHeader from "../common/PageHeader";
 import DataGrid from "../common/DataGrid";
 import {columns, data} from '../common/REPLACE-WITH-API-DATA/media-data';
 import {IoIosArrowRoundBack} from 'react-icons/io';
@@ -50,7 +51,6 @@ class MediaHome extends React.Component {
 					handleRowClick={this.handleRowClick}
 				/>;
 		} else {
-			console.log(this.state.rowSelected);
 			let row = this.state.rowSelected;
 			page_title = "Media: " + row.title;
 			page_content = <Media media={row} />
@@ -59,10 +59,11 @@ class MediaHome extends React.Component {
 		return(
 			<div className="page-content">
 				<div className="media-home">
-					{/*todo make the header and break crumb its onw component*/}
-					<IoIosArrowRoundBack className="back-arrow" onClick={this.handleBackClick} />
-					<h1 className="page-heading">{page_title}</h1>
-					<p>{page_bread_crumb}</p>
+					<PageHeader
+						page_title={page_title}
+						page_bread_crumb={page_bread_crumb}
+						handleBackClick={this.handleBackClick}
+					/>
 					{page_content}
 				</div>
 			</div>

@@ -6,27 +6,6 @@
   padding: 1%;
 }
 
-.page-heading {
-  font-weight: bold;
-  margin-left: 5px;
-  margin-bottom: -3px;
-}
-
-p {
-  margin-left: 7px;
-  text-decoration-line: underline;
-  margin-bottom: 20px;
-}
-
-.back-arrow {
-  font-size: 50px;
-}
-
-.back-arrow:hover {
-  font-size: 52px;
-  cursor: pointer;
-}
-
 @media only screen and (max-width: 550px) {
   .page-content {
     margin-left: 0;
