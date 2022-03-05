@@ -4,7 +4,6 @@ import {setNavContainerSize} from "../../Utils";
 import DataGrid from "../common/DataGrid";
 import {columns, data} from '../common/REPLACE-WITH-API-DATA/events-data';
 import Event from "./Event";
-import {IoIosArrowRoundBack} from 'react-icons/io';
 import PageHeader from "../common/PageHeader";
 
 
