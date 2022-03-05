@@ -59,14 +59,14 @@ class EventsHome extends React.Component {
 
 		return(
 			<div className="page-content">
-					<PageHeader
-						page_title={page_title}
-						page_bread_crumb={page_bread_crumb}
-						handleBackClick={this.handleBackClick}
-					/>
-					<div className="media-page-content">
-						{page_content}
-					</div>
+				<PageHeader
+					page_title={page_title}
+					page_bread_crumb={page_bread_crumb}
+					handleBackClick={this.handleBackClick}
+				/>
+				<div className="media-page-content">
+					{page_content}
+				</div>
 			</div>
         );
 	}
