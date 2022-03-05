@@ -10,7 +10,7 @@ class AccountsHome extends React.Component {
 
 	render() {
 		return(
-			<div className="page-content Accounts-home">
+			<div className="page-content accounts-home">
             	<h1>Accounts</h1>
 			</div>
         );

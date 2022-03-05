@@ -5,6 +5,8 @@ import DataGrid from "../common/DataGrid";
 import {columns, data} from '../common/REPLACE-WITH-API-DATA/events-data';
 import Event from "./Event";
 import {IoIosArrowRoundBack} from 'react-icons/io';
+import PageHeader from "../common/PageHeader";
+
 
 class EventsHome extends React.Component {
 
@@ -57,13 +59,14 @@ class EventsHome extends React.Component {
 
 		return(
 			<div className="page-content">
-				<div className="events-home">
-					<IoIosArrowRoundBack className="back-arrow" onClick={this.handleBackClick} />
-					<h1 className="page-heading">{page_title}</h1>
-					<p>{page_bread_crumb}</p>
-					{page_content}
-				</div>
-
+					<PageHeader
+						page_title={page_title}
+						page_bread_crumb={page_bread_crumb}
+						handleBackClick={this.handleBackClick}
+					/>
+					<div className="media-page-content">
+						{page_content}
+					</div>
 			</div>
         );
 	}

@@ -4,7 +4,6 @@ import {setNavContainerSize} from "../../Utils";
 import PageHeader from "../common/PageHeader";
 import DataGrid from "../common/DataGrid";
 import {columns, data} from '../common/REPLACE-WITH-API-DATA/media-data';
-import {IoIosArrowRoundBack} from 'react-icons/io';
 import Media from "../media/Media";
 
 
@@ -58,12 +57,12 @@ class MediaHome extends React.Component {
 
 		return(
 			<div className="page-content">
-				<div className="media-home">
-					<PageHeader
+				<PageHeader
 						page_title={page_title}
 						page_bread_crumb={page_bread_crumb}
 						handleBackClick={this.handleBackClick}
-					/>
+				/>
+				<div className="events-page-content">
 					{page_content}
 				</div>
 			</div>
