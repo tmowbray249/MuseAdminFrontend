@@ -1,0 +1,11 @@
+.data-table-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 1%;
+    border-radius: 5px;
+}
+
+.data-table-inner {
+    background-color: #611275;
+    border-radius: 5px;
+}
