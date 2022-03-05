@@ -1,0 +1,18 @@
+.events-home {
+    background-color: #fff;
+    padding: 1% 2% 0;
+    border-radius: 5px;
+}
+
+.temp {
+    display: block;
+}
+
+.temp h2, .temp h3, .temp p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.temp p {
+    text-decoration-line: none;
+}
