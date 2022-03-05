@@ -2,7 +2,7 @@
   "name": "muse-admin-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://unn-w17020085.newnumyspace.co.uk/museapp/admin",
+  "homepage": "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAdminFrontend",
   "dependencies": {
     "@material-ui/core": "^5.0.0-beta.5",
     "@testing-library/jest-dom": "^5.16.2",

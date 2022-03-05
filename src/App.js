@@ -18,7 +18,7 @@ function App() {
         <div className="App">
 
             {/*todo make sure the basename points to the correct location before final*/}
-            <BrowserRouter basename="/museapp/admin">
+            <BrowserRouter basename="/museapp/MuseAdminFrontend/">
 
                 <Navigation />
 

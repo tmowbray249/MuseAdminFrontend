@@ -110,6 +110,7 @@ class FunctionBar extends React.Component {
     render() {
         return(
             <div className="function-bar">
+                <span className="round-out-inner-corner" />
                 <div className="search">
                     <SearchBox />
                 </div>
