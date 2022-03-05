@@ -19,7 +19,6 @@ class DataGrid extends React.Component {
 
         return (
           <div className="data-table-container">
-              <div className="data-table-inner">
                   <DataTableExtensions {...tableData}>
                       <DataTable
                           columns={columns}
@@ -31,7 +30,6 @@ class DataGrid extends React.Component {
                           highlightOnHover
                       />
                   </DataTableExtensions>
-              </div>
           </div>
         );
     }

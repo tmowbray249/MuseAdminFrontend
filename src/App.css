@@ -1,7 +1,8 @@
 .page-content {
-  background-color: #fffafb;
+  background-color: #efefef;
   margin-left: 64px;
   height: 900px;
+  padding: 1%;
 }
 
 @media only screen and (max-width: 550px) {

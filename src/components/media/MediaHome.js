@@ -10,7 +10,7 @@ class MediaHome extends React.Component {
 			<div className="page-content media-home">
             	<FunctionBar />
             	<h1>Media</h1>
-				<DataGrid />
+				<DataGrid title/>
 			</div>
         );
 	}
