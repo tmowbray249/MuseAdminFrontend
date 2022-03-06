@@ -1,4 +1,5 @@
 import React from "react";
+import {IoLogOut} from 'react-icons/io5';
 import './Logout.css';
 
 /**
@@ -13,11 +14,7 @@ class Logout extends React.Component {
 
     render() {
         return (
-            <div>
-                <button className="btn-logout btn btn-primary btn-login fw-bold" type="submit" onClick={this.props.handleLogoutClick}>
-                    Log out
-                </button>
-            </div>
+            <IoLogOut className="logout" onClick={this.props.handleLogoutClick} />
         );
     }
 

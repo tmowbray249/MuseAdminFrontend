@@ -3,8 +3,9 @@ import './FunctionBar.css'
 import SearchBox from "./SearchBox";
 import {RiAccountCircleFill} from 'react-icons/ri'
 import {NavLink} from "react-router-dom";
-import {GoSearch} from 'react-icons/go';
+// import {GoSearch} from 'react-icons/go';
 import {AiOutlineCloseCircle} from 'react-icons/ai';
+import Logout from "./Logout";
 
 class FunctionBar extends React.Component {
 
@@ -118,16 +119,14 @@ class FunctionBar extends React.Component {
                     <div className="mobile-search-box">
                         <SearchBox />
                     </div>
-                    <div className="mobile-search-icon">
-                        <GoSearch className="open-search"/>
-                    </div>
+                    {/*<div className="mobile-search-icon">*/}
+                    {/*    <GoSearch className="open-search"/>*/}
+                    {/*</div>*/}
                     <div className="mobile-search-close-icon">
                         <AiOutlineCloseCircle className="close-search"/>
                     </div>
                 </div>
-                <NavLink to="/my-information" className="account-icon">
-                    <RiAccountCircleFill />
-                </NavLink>
+                <Logout handleLogoutClick={this.props.handleLogoutClick}/>
             </div>
         );
     }

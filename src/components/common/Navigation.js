@@ -9,6 +9,7 @@ import {BsFillCalendarEventFill} from 'react-icons/bs'
 import {FaProductHunt} from 'react-icons/fa'
 import {ImUsers} from 'react-icons/im'
 import {AiFillSetting} from 'react-icons/ai'
+import {RiAccountCircleFill} from 'react-icons/ri'
 import {setNavContainerSize} from "../../Utils";
 
 //todo add hover over icon notice for each option?
@@ -54,6 +55,7 @@ class Navigation extends React.Component {
                         <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/events">Events</NavLink>
                         <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/products">Products</NavLink>
                         <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/accounts">Accounts</NavLink>
+                        <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/my-information">My Information</NavLink>
                         <NavLink onClick={this.handleMobileNavClick} className="nav-link" to="/settings">Settings</NavLink>
                     </ul>
                 </div>
@@ -96,6 +98,13 @@ class Navigation extends React.Component {
                             <NavItem eventKey="accounts">
                                 <NavIcon><ImUsers /></NavIcon>
                                 <NavText><p className="nav-text">Accounts</p></NavText>
+                            </NavItem>
+                        </NavLink>
+
+                        <NavLink to={"/my-information"}>
+                            <NavItem eventKey="my-information">
+                                <NavIcon><RiAccountCircleFill /></NavIcon>
+                                <NavText><p className="nav-text">My Information</p></NavText>
                             </NavItem>
                         </NavLink>
 

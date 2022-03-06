@@ -38,9 +38,10 @@ class App extends Component{
 
     handleLoginClick = () => {
     //    todo obviously do this with data from the server
+        // todo use tokens to get it to remember logins for a while
         let correct_email = "example@example.com";
         let correct_password = "password";
-        
+
         if (this.state.email === correct_email && this.state.password === correct_password) {
             this.setState({
                 authenticated: true
@@ -52,6 +53,14 @@ class App extends Component{
         }
     }
 
+    handleLogoutClick = () => {
+        //todo also do token related logout stf=uff
+        console.log("click")
+        this.setState({
+            authenticated: false
+        })
+    }
+
     render() {
         let login_form;
         let app;
@@ -60,7 +69,7 @@ class App extends Component{
             login_form = "";
             app = (<BrowserRouter basename="/museapp/MuseAdminFrontend/">
                     <Navigation />
-                    <FunctionBar />
+                    <FunctionBar handleLogoutClick={this.handleLogoutClick} />
                     <Routes>
                         <Route path="/" element={<Dashboard />} />
                         <Route path="/dashboard" element={<Dashboard />} />
