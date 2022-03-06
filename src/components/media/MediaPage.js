@@ -7,7 +7,7 @@ import {columns, data} from '../common/REPLACE-WITH-API-DATA/media-data';
 import Media from "../media/Media";
 
 
-class MediaHome extends React.Component {
+class MediaPage extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -71,4 +71,4 @@ class MediaHome extends React.Component {
 
 }
 
-export default MediaHome;
+export default MediaPage;

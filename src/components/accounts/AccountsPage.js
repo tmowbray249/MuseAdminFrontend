@@ -2,7 +2,7 @@ import React from 'react';
 import {setNavContainerSize} from "../../Utils";
 
 
-class AccountsHome extends React.Component {
+class AccountsPage extends React.Component {
 
 	componentDidMount() {
 		setNavContainerSize();
@@ -18,4 +18,4 @@ class AccountsHome extends React.Component {
 
 }
 
-export default AccountsHome;
+export default AccountsPage;

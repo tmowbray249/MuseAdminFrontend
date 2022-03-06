@@ -1,6 +1,6 @@
 .login-card {
     color: #fff;
-    background-color: rgba(33, 37, 41, 0.94);
+    background-color: #5b0d28;
     border: 1px solid #fff !important;
 }
 
@@ -14,13 +14,13 @@
 }
 
 .login-btn:hover {
-    background-color: steelblue;
+    background-color: #e7b4c0;
     color: #fff;
     width: 100%;
 }
 
 .login-error-container {
-    background-color: #fff;
+
     padding: 0;
     width: fit-content;
     margin: 0 auto;
