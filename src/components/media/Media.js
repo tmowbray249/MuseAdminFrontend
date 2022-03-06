@@ -1,4 +1,6 @@
 import React from "react";
+import MediaForm from "./MediaForm";
+
 
 class Media extends React.Component {
 
@@ -26,6 +28,7 @@ class Media extends React.Component {
                     <h2>About: </h2>
                     <p>{this.props.media.plot}</p>
                 </div>
+                <MediaForm />
             </div>
         );
     }
