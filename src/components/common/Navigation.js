@@ -20,8 +20,7 @@ class Navigation extends React.Component {
     componentDidMount() {
         setNavContainerSize();
     }
-
-
+    
     handleClick = () => {
         let options = document.getElementsByClassName('nav-text');
         for(let i = 0; i < options.length; i++) {
