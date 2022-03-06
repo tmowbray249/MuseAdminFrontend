@@ -1,10 +1,9 @@
-.btn-logout {
-    width: 40%;
-    background-color: #fff;
-    color: #000;
-    border: none;
+.logout {
+    color: #fff;
+    font-size: 40px;
+    margin-top: 11px;
 }
 
-.btn-logout:hover {
-    background-color: #4682b4;
+.logout:hover {
+    cursor: pointer;
 }

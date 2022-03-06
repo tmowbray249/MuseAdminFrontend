@@ -7,7 +7,7 @@ import Event from "./Event";
 import PageHeader from "../common/PageHeader";
 
 
-class EventsHome extends React.Component {
+class EventsPage extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -72,4 +72,4 @@ class EventsHome extends React.Component {
 
 }
 
-export default EventsHome;
+export default EventsPage;

@@ -1,46 +1,112 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Navigation from "./components/common/Navigation";
-import AdminHome from "./components/home/AdminHome";
-import MediaHome from "./components/media/MediaHome";
-import EventsHome from "./components/events/EventsHome";
-import ProductsHome from "./components/products/ProductsHome";
-import AccountsHome from "./components/accounts/AccountsHome";
-import SettingsHome from "./components/settings/SettingsHome";
-import UserHome from "./components/user_account/UserHome";
+import Dashboard from "./components/home/Dashboard";
+import MediaPage from "./components/media/MediaPage";
+import EventsPage from "./components/events/EventsPage";
+import ProductsHome from "./components/products/ProductsPage";
+import AccountsPage from "./components/accounts/AccountsPage";
+import SettingsHome from "./components/settings/SettingsPage";
+import UserHome from "./components/user_account/UserPage";
 import NotFoundPage from "./components/common/NotFoundPage";
 import FunctionBar from "./components/common/FunctionBar";
+import Login from "./components/common/Login";
 
-function App() {
+class App extends Component{
 
-    return (
-        <div className="App">
+    constructor(props) {
+        super(props);
+        this.state = {
+            authenticated: false,
+            email: "",
+            password: "",
+            token: null,
+            login_error: ""
+        };
 
-            {/*todo make sure the basename points to the correct location before final*/}
-            <BrowserRouter basename="/museapp/MuseAdminFrontend/">
+    }
 
-                <Navigation />
+    handleEmail = (e) => {
+        this.setState({email: e.target.value});
+    }
 
-                <FunctionBar />
+    handlePassword = (e) => {
+        this.setState({password: e.target.value});
+    }
 
-                <Routes>
-                    <Route path="/" element={<AdminHome />} />
-                    <Route path="/dashboard" element={<AdminHome />} />
-                    <Route path="/media" element={<MediaHome />} />
-                    <Route path="/events" element={<EventsHome />} />
-                    <Route path="/products" element={<ProductsHome />} />
-                    <Route path="/accounts" element={<AccountsHome />} />
-                    <Route path="/settings" element={<SettingsHome />} />
-                    <Route path="/my-information" element={<UserHome />} />
-                    <Route path="*" element={<NotFoundPage />} />
-                </Routes>
+    handleLoginClick = () => {
+    //    todo obviously do this with data from the server
+        // todo use tokens to get it to remember logins for a while
+        let correct_email = "example@example.com";
+        let correct_password = "password";
 
-            </BrowserRouter>
+        if (this.state.email === correct_email && this.state.password === correct_password) {
+            this.setState({
+                authenticated: true
+            })
+        } else {
+            this.setState({
+                login_error: "Incorrect email or password."
+            })
+        }
+    }
 
-        </div>
-    );
+    handleLogoutClick = () => {
+        //todo also do token related logout stf=uff
+        console.log("click")
+        this.setState({
+            authenticated: false
+        })
+    }
+
+    render() {
+        let login_form;
+        let app;
+
+        if (this.state.authenticated) {
+            login_form = "";
+            app = (<BrowserRouter basename="/museapp/MuseAdminFrontend/">
+                    <Navigation />
+                    <FunctionBar handleLogoutClick={this.handleLogoutClick} />
+                    <Routes>
+                        <Route path="/" element={<Dashboard />} />
+                        <Route path="/dashboard" element={<Dashboard />} />
+                        <Route path="/media" element={<MediaPage />} />
+                        <Route path="/events" element={<EventsPage />} />
+                        <Route path="/products" element={<ProductsHome />} />
+                        <Route path="/accounts" element={<AccountsPage />} />
+                        <Route path="/settings" element={<SettingsHome />} />
+                        <Route path="/my-information" element={<UserHome />} />
+                        <Route path="*" element={<NotFoundPage />} />
+                    </Routes>
+                </BrowserRouter>
+            );
+        } else {
+            app = "";
+            login_form = (
+                <div className="login-background">
+                    <Login
+                        email={this.state.email}
+                        handleEmail={this.handleEmail}
+                        password={this.state.password}
+                        handlePassword={this.handlePassword}
+                        handleLoginClick={this.handleLoginClick}
+                        error={this.state.login_error}
+                    />
+                </div>
+            )
+        }
+
+        return(
+            <div className="App">
+                {login_form}
+                {app}
+            </div>
+        );
+    }
+
 }
 
 export default App;

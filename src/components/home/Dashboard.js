@@ -2,7 +2,7 @@ import React from 'react';
 import {setNavContainerSize} from "../../Utils";
 
 
-class ProductsHome extends React.Component {
+class Dashboard extends React.Component {
 
 	componentDidMount() {
 		setNavContainerSize();
@@ -10,12 +10,13 @@ class ProductsHome extends React.Component {
 
 	render() {
 		return(
-			<div className="page-content products-home">
-            	<h1>Products</h1>
+			<div className="page-content admin-dashboard">
+            	<h1>Dashboard</h1>
+				{/*<DataGrid />*/}
 			</div>
         );
 	}
 
 }
 
-export default ProductsHome;
+export default Dashboard;
