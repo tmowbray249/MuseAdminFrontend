@@ -5,11 +5,17 @@
     margin-bottom: 8px;
 }
 
+.heading-container {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 0 10px 5px;
+}
+
 .page-header p {
     margin-left: 7px;
     text-decoration-line: underline;
-    margin-bottom: 20px;
     color: blue;
+    margin-bottom: 0;
 }
 
 .page-heading {
@@ -20,9 +26,10 @@
 
 .back-arrow {
     font-size: 50px;
+    display: inline-block;
 }
 
 .back-arrow:hover {
-    font-size: 52px;
+    font-size: 55px;
     cursor: pointer;
 }

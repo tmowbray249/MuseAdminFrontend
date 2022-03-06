@@ -1,5 +1,6 @@
 import React from "react";
 import MediaForm from "./MediaForm";
+import {setNavContainerSize} from "../../Utils";
 
 
 class Media extends React.Component {
@@ -27,20 +28,42 @@ class Media extends React.Component {
         })
     }
 
-    handleChange = (e) => {
-        this.setState({[e.target.name]: e.target.value});
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        setNavContainerSize();
+    }
+
+
+    handleSave = (e) => {
+        alert("Handle Save");
+    }
+
+    handleSaveContinue = (e) => {
+        alert("Handle Save Continue");
+    }
+
+    handleDelete = (e) => {
+        alert("Handle Delete");
     }
 
     render() {
+        let name = this.state.name;
+        let type = this.state.type;
+        let size = this.state.size;
+        let date = this.state.date;
+        let about = this.state.info;
+
         return (
-            <div>
+            <div className="page-heading-container">
+                <h2 className="sub-heading">{this.state.name}</h2>
                 <MediaForm
-                    name={this.state.name}
-                    type={this.state.type}
-                    size={this.state.size}
-                    date={this.state.date}
-                    about={this.state.info}
-                    handleChange={this.handleChange}
+                    name={name}
+                    type={type}
+                    size={size}
+                    date={date}
+                    about={about}
+                    handleSave={this.handleSave}
+                    handleSaveContinue={this.handleSaveContinue}
+                    handleDelete={this.handleDelete}
                 />
             </div>
         );

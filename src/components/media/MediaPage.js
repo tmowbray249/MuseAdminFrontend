@@ -38,9 +38,9 @@ class MediaPage extends React.Component {
 
 	render() {
 
-		let page_title = "Media";
 		let page_bread_crumb = "bread/crumb/here"
-		let page_content = "";
+		let page_content;
+		let show_back
 
 		if (!this.state.rowSelected) {
 			page_content =
@@ -49,17 +49,19 @@ class MediaPage extends React.Component {
 					data={data}
 					handleRowClick={this.handleRowClick}
 				/>;
+			show_back = false
 		} else {
 			let row = this.state.rowSelected;
-			page_title = "Media: " + row.title;
 			page_content = <Media media={row} />
+			show_back = true
 		}
 
 		return(
 			<div className="page-content">
 				<PageHeader
-						page_title={page_title}
+						page_title="Media"
 						page_bread_crumb={page_bread_crumb}
+						show_back={show_back}
 						handleBackClick={this.handleBackClick}
 				/>
 				<div className="events-page-content">

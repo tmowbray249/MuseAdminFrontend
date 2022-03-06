@@ -11,6 +11,27 @@
   padding: 1%;
 }
 
+.sub-heading {
+  font-weight: bold;
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+
+.container {
+  padding-bottom: 20px;
+}
+
+.save-button {
+  margin-top: 20px;
+  background-color: #008000 !important;
+  margin-right: 20px;
+}
+
+.delete-button {
+  margin-top: 20px;
+  background-color: #D11A2A  !important;
+}
+
 @media only screen and (max-width: 550px) {
   .page-content {
     margin-left: 0;

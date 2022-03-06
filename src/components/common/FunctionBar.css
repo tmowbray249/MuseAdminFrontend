@@ -82,8 +82,7 @@
 
     .logout {
         position: absolute;
-        right: 5%;
-        top: 6px;
+        right: 10%;
         font-size: 40px !important;
     }
 
