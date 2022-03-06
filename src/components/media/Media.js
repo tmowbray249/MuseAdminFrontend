@@ -6,29 +6,43 @@ class Media extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            id: "",
+            name: "",
+            type: "",
+            size: "",
+            date: "",
+            info: ""
+        };
+    }
+
+    componentDidMount() {
+        this.setState({
+            id: this.props.media.id,
+            name: this.props.media.title,
+            type: this.props.media.director,
+            size: this.props.media.genres,
+            date: this.props.media.year,
+            info: this.props.media.plot
+        })
+    }
+
+    handleChange = (e) => {
+        this.setState({[e.target.name]: e.target.value});
     }
 
     render() {
+        console.log(this.state.name)
         return (
             <div>
-                <div className="temp">
-                    <h2>Type: </h2>
-                    <h3>{this.props.media.director}</h3>
-                </div>
-                <div className="temp">
-                    <h2>Size: </h2>
-                    <h3>{this.props.media.genres}</h3>
-                </div>
-                <div className="temp">
-                    <h2>Date: </h2>
-                    <h3>{this.props.media.year}</h3>
-                </div>
-                <div className="temp">
-                    <h2>About: </h2>
-                    <p>{this.props.media.plot}</p>
-                </div>
-                <MediaForm />
+                <MediaForm
+                    name={this.state.name}
+                    type={this.state.type}
+                    size={this.state.size}
+                    date={this.state.date}
+                    about={this.state.info}
+                    handleChange={this.handleChange}
+                />
             </div>
         );
     }
