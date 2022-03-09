@@ -28,6 +28,46 @@ class App extends Component{
 
     }
 
+    componentDidMount() {
+        if (localStorage.getItem('wt')) {  // todo look into the other method of storing tokens
+            let url = "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/authenticate";
+            // let url = "http://localhost/museapp/MuseAppAPI/api/authenticate";
+
+            let formData = new FormData();
+            formData.append('token', localStorage.getItem('wt'));
+
+            fetch(url, {
+                method: 'POST',
+                headers: new Headers(),
+                body: formData
+            }).then( (response) => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    throw Error();
+                }
+            }).then( (data) => {
+                if (data.statusCode !== 200) {
+                    localStorage.removeItem('wt');
+                    this.setState({
+                        authenticated: false,
+                        login_error: "You have been logged out to keep your account secure. Please login again."
+                    });
+                } else {
+                    this.setState({
+                        authenticated: true,
+                        token: data.data.token
+                    });
+                }
+            }).catch( () => {
+                this.setState({
+                    authenticated: false,
+                    login_error: "Something went wrong. Please try again later."
+                });
+            });
+        }
+    }
+
     handleUsername = (e) => {
         this.setState({username: e.target.value});
     }
@@ -37,8 +77,8 @@ class App extends Component{
     }
 
     handleLoginClick = () => {
-        // let url = "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/authenticate";
-        let url = "http://localhost/museapp/MuseAppAPI/api/authenticate";
+        let url = "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/authenticate";
+        // let url = "http://localhost/museapp/MuseAppAPI/api/authenticate";
         if (this.state.username !== "" && this.state.password !== "") {
             let formData = new FormData();
             formData.append('username', this.state.username);
@@ -62,7 +102,7 @@ class App extends Component{
                             token: data.data.token
                         });
 
-                        localStorage.setItem('myReadingListToken', data.data.token);
+                        localStorage.setItem('wt', data.data.token);
                     }
                 } else if (data.statusCode === 401) {
                     let error = data.message.split(".")[0];
@@ -89,7 +129,7 @@ class App extends Component{
             login_error: ""
         })
 
-        localStorage.removeItem('myReadingListToken');
+        localStorage.removeItem('wt');
     }
 
     render() {
