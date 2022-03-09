@@ -1,6 +1,6 @@
 .events-page-content {
     background-color: #fff;
-    padding: 1% 2% 0;
+    padding: 1% 1% 0;
     border-radius: 5px;
 }
 
@@ -11,4 +11,10 @@
 .temp h2, .temp h3, .temp p {
     display: inline-block;
     margin-right: 10px;
+}
+
+@media only screen and (max-width: 550px) {
+    .events-page-content {
+        padding: 20px 2% 0;
+    }
 }

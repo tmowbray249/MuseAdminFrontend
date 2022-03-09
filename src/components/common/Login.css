@@ -1,7 +1,12 @@
+.login-title {
+    margin-bottom: 25px;
+}
+
 .login-card {
     color: #fff;
     background-color: #5b0d28;
     border: 1px solid #fff !important;
+    border-radius: 5px !important;
 }
 
 .login-card .form-floating {
@@ -9,8 +14,8 @@
 }
 
 .login-btn {
+    height: 50px;
     background-color: #efefef;
-    margin: 10px 0;
 }
 
 .login-btn:hover {
@@ -20,10 +25,10 @@
 }
 
 .login-error-container {
-
     padding: 0;
     width: fit-content;
     margin: 0 auto;
+    margin-bottom: 15px;
     border-radius: 5px;
 }
 

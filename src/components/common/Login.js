@@ -30,12 +30,12 @@ class Login extends React.Component {
                     <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
                         <div className="login-card card border-0 shadow rounded-3 my-5">
                             <div className="card-body p-4">
-                                <h2 className="card-title text-center">Log In</h2>
+                                <h2 className="login-title card-title text-center">Log In</h2>
                                 <div className="form-floating mb-3">
-                                    <input type="email" className="form-control" placeholder="name@example.com"
-                                           value={this.props.email} onChange={this.props.handleEmail}
+                                    <input type="text" className="form-control" placeholder="Username"
+                                           value={this.props.username} onChange={this.props.handleUsername}
                                     />
-                                    <label>Email address</label>
+                                    <label>Username</label>
                                 </div>
                                 <div className="form-floating mb-3">
                                     <input type="password" className="form-control" placeholder="Password"

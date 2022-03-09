@@ -4,12 +4,14 @@
     padding: 0 2% 1px;
     margin-bottom: 8px;
     text-align: center;
+    position: relative;
 }
 
 .heading-container {
     display: inline-block;
     vertical-align: middle;
     margin: 5px 0 10px 5px;
+    text-align: center;
 }
 
 .page-header p {
@@ -25,6 +27,11 @@
     margin-bottom: -3px;
 }
 
+.back-arrow-container {
+    position: absolute;
+    margin-top: 18px;
+}
+
 .back-arrow {
     font-size: 50px;
     display: inline-block;
@@ -33,4 +40,10 @@
 .back-arrow:hover {
     font-size: 55px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+    .back-arrow-container {
+        margin: 3% 0 ;
+    }
 }

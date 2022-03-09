@@ -20,7 +20,7 @@ class App extends Component{
         super(props);
         this.state = {
             authenticated: false,
-            email: "",
+            username: "",
             password: "",
             token: null,
             login_error: ""
@@ -28,8 +28,8 @@ class App extends Component{
 
     }
 
-    handleEmail = (e) => {
-        this.setState({email: e.target.value});
+    handleUsername = (e) => {
+        this.setState({username: e.target.value});
     }
 
     handlePassword = (e) => {
@@ -37,28 +37,59 @@ class App extends Component{
     }
 
     handleLoginClick = () => {
-    //    todo obviously do this with data from the server
-        // todo use tokens to get it to remember logins for a while
-        let correct_email = "example@example.com";
-        let correct_password = "password";
+        // let url = "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/authenticate";
+        let url = "http://localhost/museapp/MuseAppAPI/api/authenticate";
+        if (this.state.username !== "" && this.state.password !== "") {
+            let formData = new FormData();
+            formData.append('username', this.state.username);
+            formData.append('password', this.state.password);
 
-        if (this.state.email === correct_email && this.state.password === correct_password) {
-            this.setState({
-                authenticated: true
-            })
+            fetch(url, {
+                method: 'POST',
+                headers: new Headers(),
+                body: formData
+            }).then((response) => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    throw Error();
+                }
+            }).then((data) => {
+                if (data.statusCode === 200) {
+                    if ('token' in data.data) {
+                        this.setState({
+                            authenticated: true,
+                            token: data.data.token
+                        });
+
+                        localStorage.setItem('myReadingListToken', data.data.token);
+                    }
+                } else if (data.statusCode === 401) {
+                    let error = data.message.split(".")[0];
+                    if (error === "Incorrect username or password") {
+                        this.setState({login_error: error});
+                    }
+                }
+            }).catch(() => {
+                this.setState({
+                    authenticated: false,
+                    login_error: "Something went wrong. Please try again later."
+                });
+            });
         } else {
-            this.setState({
-                login_error: "Incorrect email or password."
-            })
+            this.setState({login_error: "Please enter both an username and password"});
         }
+
     }
 
     handleLogoutClick = () => {
-        //todo also do token related logout stf=uff
-        console.log("click")
         this.setState({
-            authenticated: false
+            authenticated: false,
+            token: null,
+            login_error: ""
         })
+
+        localStorage.removeItem('myReadingListToken');
     }
 
     render() {
@@ -88,8 +119,8 @@ class App extends Component{
             login_form = (
                 <div className="login-background">
                     <Login
-                        email={this.state.email}
-                        handleEmail={this.handleEmail}
+                        username={this.state.username}
+                        handleUsername={this.handleUsername}
                         password={this.state.password}
                         handlePassword={this.handlePassword}
                         handleLoginClick={this.handleLoginClick}

@@ -13,8 +13,8 @@
 
 .sub-heading {
   font-weight: bold;
-  margin-left: 5px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .container {
@@ -35,5 +35,9 @@
 @media only screen and (max-width: 550px) {
   .page-content {
     margin-left: 0;
+  }
+
+  .save-heading {
+    text-align: center;
   }
 }

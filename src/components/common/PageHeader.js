@@ -8,7 +8,7 @@ class PageHeader extends React.Component {
 
         let back_button;
         if (this.props.show_back) {
-            back_button = <IoIosArrowRoundBack className="back-arrow" onClick={this.props.handleBackClick} />
+            back_button = <div className="back-arrow-container"><IoIosArrowRoundBack className="back-arrow" onClick={this.props.handleBackClick} /></div>
         }
 
         return (
