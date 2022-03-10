@@ -1,14 +1,14 @@
 .data-table-container ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #838383 !important;
+    color: #5d5d5d !important;
     opacity: 1 !important; /* Firefox */
 }
 
 .data-table-container:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #838383 !important;
+    color: #5d5d5d !important;
 }
 
 .data-table-container::-ms-input-placeholder { /* Microsoft Edge */
-    color: #838383 !important;
+    color: #5d5d5d !important;
 }
 
 .data-table-container {
