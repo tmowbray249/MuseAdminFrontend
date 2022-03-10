@@ -33,10 +33,8 @@
         width: 100%;
         position: absolute;
         display: inline-flex;
-        z-index: 100;
         top: 0;
-        /*left: 64px;*/
-        /*margin-left: 0;*/
+        margin-left: 0;
     }
 
     .round-out-inner-corner {
@@ -44,9 +42,8 @@
     }
 
     .logo {
-        position: absolute;
-        width: 100%;
-        margin: 10px -5px;
+        z-index: 1000;
+        margin: 10px auto;
     }
 
     .logo-text {
@@ -54,7 +51,7 @@
     }
 
     .logout {
-        right: 70px;
+        right: 5px;
     }
 
 }
