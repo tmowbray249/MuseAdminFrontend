@@ -27,6 +27,7 @@
     position: absolute;
     right: 15px;
     font-size: 40px !important;
+    z-index: 1007;
 }
 
 @media only screen and (max-width: 550px) {
@@ -52,7 +53,6 @@
 
     .logout {
         right: 5px;
-        z-index: 1;
     }
 
 }
