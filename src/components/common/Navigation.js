@@ -43,10 +43,6 @@ class Navigation extends React.Component {
         setNavContainerSize();
     }
 
-    handleSideMenuToggleClick = () => {
-
-    }
-
     handleMobileNavClick = () => {
         document.getElementById("mobile-nav-checkbox").checked = false;
         setNavContainerSize();

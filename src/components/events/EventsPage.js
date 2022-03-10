@@ -1,6 +1,6 @@
 import React from 'react';
 import './Events.css';
-import {setNavContainerSize} from "../../Utils";
+import {setPageResponsiveCSSValues} from "../../Utils";
 import DataGrid from "../common/DataGrid";
 import {columns, data} from '../common/REPLACE-WITH-API-DATA/events-data';
 import Event from "./Event";
@@ -17,11 +17,11 @@ class EventsPage extends React.Component {
 	}
 
 	componentDidMount() {
-		setNavContainerSize();
+		setPageResponsiveCSSValues();
 	}
 
 	componentDidUpdate(prevProps, prevState, snapshot) {
-		setNavContainerSize();
+		setPageResponsiveCSSValues();
 	}
 
 	handleRowClick = (row) => {
