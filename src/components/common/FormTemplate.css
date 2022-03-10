@@ -14,3 +14,16 @@
     text-align: right;
 }
 
+.save-button {
+    margin-top: 20px;
+    background-color: #008000 !important;
+    border-color: #008000 !important;
+    margin-right: 20px;
+}
+
+.delete-button {
+    margin-top: 20px;
+    background-color: #D11A2A !important;
+    border-color: #D11A2A !important;
+}
+
