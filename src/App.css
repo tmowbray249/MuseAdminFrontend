@@ -36,7 +36,8 @@
 
 @media only screen and (max-width: 550px) {
   .page-content {
-    margin-left: 0;
+    margin-left: 0 !important;
+
   }
 
   .save-heading {
