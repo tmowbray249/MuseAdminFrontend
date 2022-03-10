@@ -22,7 +22,17 @@ class Navigation extends React.Component {
     }
     
     handleClick = () => {
+        let page_content = document.getElementsByClassName('page-content')[0];
         let options = document.getElementsByClassName('nav-text');
+
+        // set the page content margin to width of menu if open & unset if closed
+        if (page_content.style.marginLeft === "240px") {
+            page_content.style.marginLeft = "64px";
+        } else {
+            page_content.style.marginLeft = "240px";
+        }
+
+        // show the nav option text if menu open and hide if menu closed
         for(let i = 0; i < options.length; i++) {
             if (options[i].style.display === "block") {
                 options[i].style.display = 'none';
@@ -31,6 +41,10 @@ class Navigation extends React.Component {
             }
         }
         setNavContainerSize();
+    }
+
+    handleSideMenuToggleClick = () => {
+
     }
 
     handleMobileNavClick = () => {

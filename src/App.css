@@ -9,6 +9,8 @@
   height: 100%;
   min-height: 364px;
   padding: 1%;
+  transition: margin-left;
+  transition-duration: 0.2s;
 }
 
 .sub-heading {
