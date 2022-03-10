@@ -15,7 +15,7 @@ class Dashboard extends React.Component {
 
 	render() {
 		let page_content = "Dashboard content here"
-		let page_title = "Welcome " + this.props.user;
+		let page_title = "Hi " + this.props.user + "!";
 		let page_bread_crumb = "page/bread/crumb";
 
 		return(
