@@ -3,7 +3,7 @@
   background-color: #f1dada;
 }
 
-.page-content {
+.page-container {
   background-color: #efefef;
   margin-left: 64px;
   height: 100%;
@@ -12,6 +12,13 @@
   transition: margin-left;
   transition-duration: 0.2s;
 }
+
+.page-content {
+  background-color: #fff;
+  padding: 1% 2% 0;
+  border-radius: 5px;
+}
+
 
 .sub-heading {
   font-weight: bold;
@@ -35,7 +42,7 @@
 }
 
 @media only screen and (max-width: 550px) {
-  .page-content {
+  .page-container {
     margin-left: 0 !important;
 
   }

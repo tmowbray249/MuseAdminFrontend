@@ -57,13 +57,13 @@ class EventsPage extends React.Component {
 
 
 		return(
-			<div className="page-content">
+			<div className="page-container">
 				<PageHeader
 					page_title={page_title}
 					page_bread_crumb={page_bread_crumb}
 					handleBackClick={this.handleBackClick}
 				/>
-				<div className="media-page-content">
+				<div className="page-content">
 					{page_content}
 				</div>
 			</div>

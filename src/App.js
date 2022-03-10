@@ -23,7 +23,8 @@ class App extends Component{
             username: "",
             password: "",
             token: null,
-            login_error: ""
+            login_error: "",
+            user: ""
         };
 
     }
@@ -31,7 +32,6 @@ class App extends Component{
     componentDidMount() {
         if (localStorage.getItem('wt')) {  // todo look into the other method of storing tokens
             let url = "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/authenticate";
-            // let url = "http://localhost/museapp/MuseAppAPI/api/authenticate";
 
             let formData = new FormData();
             formData.append('token', localStorage.getItem('wt'));
@@ -51,18 +51,21 @@ class App extends Component{
                     localStorage.removeItem('wt');
                     this.setState({
                         authenticated: false,
-                        login_error: "You have been logged out to keep your account secure. Please login again."
+                        login_error: "You have been logged out to keep your account secure. Please login again.",
+                        user: ""
                     });
                 } else {
                     this.setState({
                         authenticated: true,
-                        token: data.data.token
+                        token: data.data.token,
+                        user: data.data.username
                     });
                 }
             }).catch( () => {
                 this.setState({
                     authenticated: false,
-                    login_error: "Something went wrong. Please try again later."
+                    login_error: "Something went wrong. Please try again later.",
+                    user: ""
                 });
             });
         }
@@ -78,7 +81,6 @@ class App extends Component{
 
     handleLoginClick = () => {
         let url = "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/authenticate";
-        // let url = "http://localhost/museapp/MuseAppAPI/api/authenticate";
         if (this.state.username !== "" && this.state.password !== "") {
             let formData = new FormData();
             formData.append('username', this.state.username);
@@ -99,7 +101,8 @@ class App extends Component{
                     if ('token' in data.data) {
                         this.setState({
                             authenticated: true,
-                            token: data.data.token
+                            token: data.data.token,
+                            user: data.data.username
                         });
 
                         localStorage.setItem('wt', data.data.token);
@@ -113,7 +116,8 @@ class App extends Component{
             }).catch(() => {
                 this.setState({
                     authenticated: false,
-                    login_error: "Something went wrong. Please try again later."
+                    login_error: "Something went wrong. Please try again later.",
+                    user: ""
                 });
             });
         } else {
@@ -126,7 +130,8 @@ class App extends Component{
         this.setState({
             authenticated: false,
             token: null,
-            login_error: ""
+            login_error: "",
+            user: ""
         })
 
         localStorage.removeItem('wt');
@@ -142,8 +147,8 @@ class App extends Component{
                     <Navigation />
                     <FunctionBar handleLogoutClick={this.handleLogoutClick} />
                     <Routes>
-                        <Route path="/" element={<Dashboard />} />
-                        <Route path="/dashboard" element={<Dashboard />} />
+                        <Route path="/" element={<Dashboard user={this.state.user}/>} />
+                        <Route path="/dashboard" element={<Dashboard user={this.state.user}/>} />
                         <Route path="/media" element={<MediaPage />} />
                         <Route path="/events" element={<EventsPage />} />
                         <Route path="/products" element={<ProductsHome />} />

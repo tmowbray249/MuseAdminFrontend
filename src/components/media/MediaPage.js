@@ -57,14 +57,14 @@ class MediaPage extends React.Component {
 		}
 
 		return(
-			<div className="page-content">
+			<div className="page-container">
 				<PageHeader
 						page_title="Media"
 						page_bread_crumb={page_bread_crumb}
 						show_back={show_back}
 						handleBackClick={this.handleBackClick}
 				/>
-				<div className="events-page-content">
+				<div className="page-content">
 					{page_content}
 				</div>
 			</div>
