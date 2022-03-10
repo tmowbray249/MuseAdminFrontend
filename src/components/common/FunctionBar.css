@@ -15,31 +15,24 @@
     border-radius: 5px;
 }
 
-.search-area {
-    width: 50% !important;
+.logo {
+    margin-left: 1%;
+    margin-top: 10px;
 }
 
-.mobile-search, .mobile-search-box, .mobile-search-close-icon {
-    display: none;
+.logo-text {
+    color: #fff;
 }
 
 @media only screen and (max-width: 1500px) {
     .function-bar {
         grid-template-columns: 94% 6%;
     }
-
-    .search-area {
-        width: 80% !important;
-    }
 }
 
 @media only screen and (max-width: 1000px) {
     .function-bar {
         grid-template-columns: 91% 9%;
-    }
-
-    .search-area {
-        width: 90% !important;
     }
 }
 
@@ -51,63 +44,31 @@
 
 @media only screen and (max-width: 550px) {
     .function-bar {
-        width: 20%;
+        width: 100%;
         position: absolute;
         display: inline-flex;
-        top: 0;
         z-index: 100;
-        margin-left: 80%;
+        top: 0;
+        left: 64px;
     }
 
     .round-out-inner-corner {
         display: none;
     }
 
-    .search {
-        display: none;
-        padding: 9px;
+    .logo {
+        text-align: center;
+        width: 49%;
     }
 
-    .mobile-search {
-        display: block;
-        color: #fff;
-        font-size: 26px;
-        padding: 9px;
-    }
-
-    .mobile-search-icon {
-        margin-right: 15px;
-        margin-left: -20%;
+    .logo-text {
+        margin-top: 6px;
     }
 
     .logout {
         position: absolute;
-        right: 10%;
+        right: 28%;
         font-size: 40px !important;
-    }
-
-    .search-icon {
-        display: none !important;
-    }
-
-}
-
-@media only screen and (max-width: 400px) {
-    .function-bar {
-        width: 25%;
-        margin-left: 75%;
-    }
-
-    .mobile-search-icon {
-        margin-left: -5%;
-    }
-
-}
-
-@media only screen and (max-width: 350px) {
-    .function-bar {
-        width: 35%;
-        margin-left: 75%;
     }
 
 }

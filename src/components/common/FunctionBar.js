@@ -1,21 +1,14 @@
 import React from 'react';
 import './FunctionBar.css'
-import SearchBox from "./SearchBox";
-import {RiAccountCircleFill} from 'react-icons/ri'
-import {NavLink} from "react-router-dom";
-// import {GoSearch} from 'react-icons/go';
-import {AiOutlineCloseCircle} from 'react-icons/ai';
 import Logout from "./Logout";
 
 class FunctionBar extends React.Component {
 
-    //todo theres a bug when making screen big with mobile search open
-
     // todo replace the search bar with the muse logo?
     //      that way I wont have to spend ages on the global search function that hasn't been asked for
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             function_bar: "",
             account_icon: "",
@@ -40,7 +33,6 @@ class FunctionBar extends React.Component {
     }
 
     handleMobileSearchClick = (e) => {
-        //todo hit boxes may need tuning
         let action = e.target.className.baseVal;
         if (action === "close-search") {
             this.closeMobileSearchBar()
@@ -112,19 +104,8 @@ class FunctionBar extends React.Component {
         return(
             <div className="function-bar">
                 <span className="round-out-inner-corner" />
-                <div className="search">
-                    <SearchBox />
-                </div>
-                <div className="mobile-search" onClick={this.handleMobileSearchClick}>
-                    <div className="mobile-search-box">
-                        <SearchBox />
-                    </div>
-                    {/*<div className="mobile-search-icon">*/}
-                    {/*    <GoSearch className="open-search"/>*/}
-                    {/*</div>*/}
-                    <div className="mobile-search-close-icon">
-                        <AiOutlineCloseCircle className="close-search"/>
-                    </div>
+                <div className="logo">
+                    <h2 className="logo-text">Muse. Admin</h2>
                 </div>
                 <Logout handleLogoutClick={this.props.handleLogoutClick}/>
             </div>
