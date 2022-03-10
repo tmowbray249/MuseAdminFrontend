@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import "../common/FormTemplate.css";
 
 
 class MediaForm extends React.Component {
@@ -38,9 +39,15 @@ class MediaForm extends React.Component {
                             <Form.Control as="textarea" rows={3} name="about" defaultValue={this.props.about} />
                         </Form.Group>
 
-                        <Button className="save-button" variant="primary" onClick={this.props.handleSave}>Save</Button>
-                        <Button className="save-button" variant="primary" onClick={this.props.handleSaveContinue}>Save & Continue</Button>
-                        <Button className="delete-button" variant="primary" onClick={this.props.handleDelete}>Delete</Button>
+                        <div className="form-buttons">
+                            <div className="save-buttons-container">
+                                <Button className="save-button" variant="primary" onClick={this.props.handleSave}>Save</Button>
+                                <Button className="save-button" variant="primary" onClick={this.props.handleSaveContinue}>Save & Continue</Button>
+                            </div>
+                            <div className="delete-button-container">
+                                <Button className="delete-button" variant="primary" onClick={this.props.handleDelete}>Delete</Button>
+                            </div>
+                        </div>
                         
                     </Form>
                 </Container>

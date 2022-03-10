@@ -1,0 +1,16 @@
+.form-buttons {
+    display: block;
+    position: relative;
+    height: 60px;
+}
+
+.save-buttons-container, .delete-button-container {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+}
+
+.delete-button-container {
+    text-align: right;
+}
+
