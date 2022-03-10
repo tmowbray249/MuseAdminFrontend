@@ -17,7 +17,6 @@ export const setPageContentMargin = () => {
     } else {
         page_content.style.marginLeft = "64px";
     }
-    
 }
 
 export const setPageResponsiveCSSValues = () => {
