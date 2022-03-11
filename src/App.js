@@ -127,14 +127,16 @@ class App extends Component{
     }
 
     handleLogoutClick = () => {
-        this.setState({
-            authenticated: false,
-            token: null,
-            login_error: "",
-            user: ""
-        })
+        if (window.confirm("Are you sure you want to logout?")) {
+            this.setState({
+                authenticated: false,
+                token: null,
+                login_error: "",
+                user: ""
+            })
 
-        localStorage.removeItem('wt');
+            localStorage.removeItem('wt');
+        }
     }
 
     render() {

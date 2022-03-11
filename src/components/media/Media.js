@@ -42,6 +42,7 @@ class Media extends React.Component {
     }
 
     handleDelete = (e) => {
+        if (window.confirm("Are you sure you want to delete " + this.state.name + "\nThis can not be undone"));
         alert("Handle Delete");
     }
 

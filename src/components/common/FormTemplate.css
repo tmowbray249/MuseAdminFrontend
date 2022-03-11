@@ -7,11 +7,17 @@
 .save-buttons-container, .delete-button-container {
     display: inline-block;
     position: absolute;
-    width: 100%;
+}
+
+.save-buttons-container {
+    width: 86%;
+    margin-right: 14%;
 }
 
 .delete-button-container {
     text-align: right;
+    margin-left: 86%;
+    width: 14%;
 }
 
 .save-button {
