@@ -5,9 +5,9 @@ import PageHeader from "../common/PageHeader";
 
 class UserPage extends React.Component {
 
-	constructor(props) {
-		super(props);
-	}
+	// constructor(props) {
+	// 	super(props);
+	// }
 
 	componentDidMount() {
 		setPageContentMargin();

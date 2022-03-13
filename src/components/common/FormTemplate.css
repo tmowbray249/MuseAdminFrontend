@@ -38,8 +38,12 @@
 }
 
 #form-event_category, #form-event_date, #form-event_start, #form-event_end,
-#form-event_type, #form-event_image, #form-S_o_S {
+#form-event_type, #form-S_o_S {
     width: fit-content;
+}
+
+#form-event_image {
+    width: 350px;
 }
 
 @media only screen and (max-width: 550px) {

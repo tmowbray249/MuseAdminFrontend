@@ -12,6 +12,8 @@ class EventForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            url: "http://localhost/museapp/MuseAppAPI/api/events",
+            // url: "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/events",
             type_options: [],
             category_options: [],
             show_venue_fields: false
@@ -33,12 +35,10 @@ class EventForm extends React.Component {
     }
 
     getEventCategories = () => {
-        // let url = "http://localhost/museapp/MuseAppAPI/api/events";
-        let url = "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/events";
         let formData = new FormData();
         formData.append('action', 'get-event-categories');
 
-        fetch(url, {
+        fetch(this.state.url, {
             method: 'POST',
             headers: new Headers(),
             body: formData
@@ -65,12 +65,10 @@ class EventForm extends React.Component {
     }
 
     getEventTypes = () => {
-        // let url = "http://localhost/museapp/MuseAppAPI/api/events";
-        let url = "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/events";
         let formData = new FormData();
         formData.append('action', 'get-event-types');
 
-        fetch(url, {
+        fetch(this.state.url, {
             method: 'POST',
             headers: new Headers(),
             body: formData
@@ -176,8 +174,10 @@ class EventForm extends React.Component {
                         </Form.Group>
 
                         <Form.Group controlId="form-event_image">
+                            {/*todo show image thumbnail? */}
                             <Form.Label>Event Image</Form.Label>
-                            <Form.Control type="image" name="event_image" value={this.props.image} onChange={this.props.handleImageChange}/>
+                            <Form.Control type="text" name="event_image_name" placeholder="Event image" value={this.props.image_name} onChange={this.props.handleImageNameChange}/>
+                            <Form.Control type="file" name="event_image" filename={this.props.image} onChange={this.props.handleImageChange}/>
                         </Form.Group>
 
                         <Form.Group controlId="form-event_type">

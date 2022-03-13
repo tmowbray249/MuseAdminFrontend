@@ -12,6 +12,8 @@ class EventsPage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			url: "http://localhost/museapp/MuseAppAPI/api/events",
+			// url: "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/events",
 			page: 'home',
 			table_data: [],
 			event_data: [],
@@ -37,12 +39,10 @@ class EventsPage extends React.Component {
 	}
 
 	getEvents = () => {
-		// let url = "http://localhost/museapp/MuseAppAPI/api/events";
-		let url = "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/events";
 		let formData = new FormData();
 		formData.append('action', 'get-events');
 
-		fetch(url, {
+		fetch(this.state.url, {
 			method: 'POST',
 			headers: new Headers(),
 			body: formData
@@ -54,7 +54,7 @@ class EventsPage extends React.Component {
 			}
 		}).then( (data) => {
 			this.prepareDataForTable(data.data)
-		}).catch( () => {
+		}).catch( (e) => {
 			this.setState({
 				error: "Something went wrong. Please try again later."
 			});
@@ -62,13 +62,11 @@ class EventsPage extends React.Component {
 	}
 
 	getEventDetails = (event_id) => {
-		// let url = "http://localhost/museapp/MuseAppAPI/api/events";
-		let url = "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/events";
 		let formData = new FormData();
 		formData.append('action', 'get-event-details');
 		formData.append('event_id', event_id)
 
-		fetch(url, {
+		fetch(this.state.url, {
 			method: 'POST',
 			headers: new Headers(),
 			body: formData
