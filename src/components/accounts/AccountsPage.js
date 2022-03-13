@@ -49,7 +49,7 @@ class AccountsPage extends React.Component {
 				/>;
 			show_back = false
 		} else {
-			let row = this.state.rowSelected;
+			// let row = this.state.rowSelected;
 			// page_content = <Media media={row} />
 			show_back = true
 		}

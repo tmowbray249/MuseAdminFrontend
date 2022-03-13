@@ -12,8 +12,8 @@ class EventsPage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			url: "http://localhost/museapp/MuseAppAPI/api/events",
-			// url: "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/events",
+			// url: "http://localhost/museapp/MuseAppAPI/api/events",
+			url: "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/events",
 			page: 'home',
 			table_data: [],
 			event_data: [],

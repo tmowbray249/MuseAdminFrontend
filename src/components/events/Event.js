@@ -7,8 +7,8 @@ class Event extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            url: "http://localhost/museapp/MuseAppAPI/api/events",
-            // url: "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/events",
+            // url: "http://localhost/museapp/MuseAppAPI/api/events",
+            url: "http://unn-w17020085.newnumyspace.co.uk/museapp/MuseAppAPI/api/events",
             event_id: "",
             event_name: "",
             event_summary: "",
