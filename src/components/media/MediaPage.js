@@ -1,6 +1,6 @@
 import React from 'react';
 import './Media.css';
-import {setPageResponsiveCSSValues} from "../../Utils";
+import {setPageContentMargin} from "../../Utils";
 import PageHeader from "../common/PageHeader";
 import DataGrid from "../common/DataGrid";
 import {columns, data} from '../common/REPLACE-WITH-API-DATA/media-data';
@@ -17,11 +17,11 @@ class MediaPage extends React.Component {
 	}
 
 	componentDidMount() {
-		setPageResponsiveCSSValues();
+		setPageContentMargin();
 	}
 
 	componentDidUpdate(prevProps, prevState, snapshot) {
-		setPageResponsiveCSSValues();
+		setPageContentMargin();
 	}
 
 	handleRowClick = (row) => {

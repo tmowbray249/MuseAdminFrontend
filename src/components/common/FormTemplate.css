@@ -33,3 +33,24 @@
     border-color: #D11A2A !important;
 }
 
+.event_form div input, .event_form div textarea, .event_form div select {
+    margin-bottom: 10px;
+}
+
+#form-event_name, #form-event_summary, #form-signup_url {
+    width: 70%;
+}
+
+#form-event_category, #form-event_date, #form-event_start, #form-event_end,
+#form-event_type, #form-event_image, #form-S_o_S {
+    width: fit-content;
+    padding-right: 500px;
+}
+
+@media only screen and (max-width: 550px) {
+    .delete-button-container {
+        margin-left: 77%;
+        width: 23%;
+    }
+}
+

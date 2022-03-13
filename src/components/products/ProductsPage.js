@@ -1,5 +1,5 @@
 import React from 'react';
-import {setPageResponsiveCSSValues} from "../../Utils";
+import {setPageContentMargin} from "../../Utils";
 import DataGrid from "../common/DataGrid";
 import {columns, data} from '../common/REPLACE-WITH-API-DATA/events-data';
 import PageHeader from "../common/PageHeader";
@@ -15,11 +15,11 @@ class ProductsPage extends React.Component {
 	}
 
 	componentDidMount() {
-		setPageResponsiveCSSValues();
+		setPageContentMargin();
 	}
 
 	componentDidUpdate(prevProps, prevState, snapshot) {
-		setPageResponsiveCSSValues();
+		setPageContentMargin();
 	}
 
 	handleRowClick = (row) => {

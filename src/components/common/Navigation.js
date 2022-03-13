@@ -10,17 +10,11 @@ import {FaProductHunt} from 'react-icons/fa'
 import {ImUsers} from 'react-icons/im'
 import {AiFillSetting} from 'react-icons/ai'
 import {RiAccountCircleFill} from 'react-icons/ri'
-import {setNavContainerSize} from "../../Utils";
 
 //todo add hover over icon notice for each option?
 
 class Navigation extends React.Component {
 
-
-    componentDidMount() {
-        setNavContainerSize();
-    }
-    
     handleClick = () => {
         let page_container = document.getElementsByClassName('page-container')[0];
         let options = document.getElementsByClassName('nav-text');
@@ -40,12 +34,10 @@ class Navigation extends React.Component {
                 options[i].style.display = 'block';
             }
         }
-        setNavContainerSize();
     }
 
     handleMobileNavClick = () => {
         document.getElementById("mobile-nav-checkbox").checked = false;
-        setNavContainerSize();
     }
 
     render() {

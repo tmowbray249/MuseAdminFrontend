@@ -1,0 +1,13 @@
+.new-event-button {
+    margin-top: 20px;
+    background-color: #008000 !important;
+    border-color: #008000 !important;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 550px){
+    .new-event-button {
+        margin-top: 20px;
+        width: 100%;
+    }
+}

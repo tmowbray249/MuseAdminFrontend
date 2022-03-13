@@ -1,6 +1,6 @@
 import React from "react";
 import MediaForm from "./MediaForm";
-import {setNavContainerSize} from "../../Utils";
+import {setPageContentMargin} from "../../Utils";
 
 
 class Media extends React.Component {
@@ -18,6 +18,7 @@ class Media extends React.Component {
     }
 
     componentDidMount() {
+        setPageContentMargin();
         this.setState({
             id: this.props.media.id,
             name: this.props.media.title,
@@ -29,7 +30,7 @@ class Media extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        setNavContainerSize();
+        setPageContentMargin();
     }
 
 
@@ -42,8 +43,9 @@ class Media extends React.Component {
     }
 
     handleDelete = (e) => {
-        if (window.confirm("Are you sure you want to delete " + this.state.name + "\nThis can not be undone"));
-        alert("Handle Delete");
+        if (window.confirm("Are you sure you want to delete " + this.state.name + "\nThis can not be undone")){
+            alert("Handle Delete");
+        }
     }
 
     render() {

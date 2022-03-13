@@ -16,7 +16,6 @@ class PageHeader extends React.Component {
                 {back_button}
                 <div className="heading-container">
                     <h1 className="page-heading">{this.props.page_title}</h1>
-                    <p>{this.props.page_bread_crumb}</p>
                 </div>
             </div>
         );
